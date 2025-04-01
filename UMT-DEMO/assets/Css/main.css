@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+}
+
+.header { 
+    height: auto;
+    /* background-color: var(--primary-first-color); */
+    display: block;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+}
+
+/* start header-top */
+.header-top { 
+    background-color: var(--primary-first-color);
+}
+.header-top-content { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 36px; 
+}
+.header-top-content-list { 
+    display: flex;
+    list-style-type: none;
+}
+.header-top-content-item { 
+    margin: 0 12px;
+    position: relative;
+}
+.header-top-content-item::after { 
+    content: " "; 
+    display: block;
+    width: 100%;
+    height:20px;
+    position: absolute;
+    top: 32px;
+}
+.header-top-content-link { 
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.header-top-content-item:hover .header-top-content-link { 
+    color: var(--primary-thir-color)
+}
+.header-top-content-item:hover .header-top-content-link i { 
+    color: var(--white-color);
+}
+.header-top-content-icon { 
+    margin-right: 14px;
+    font-size: 2.3rem;
+    vertical-align: sub;
+}
+.header-top-content-icon__search { 
+    font-size: 25px;
+    position: relative;
+    top:5px
+}
+.header-top-content-link-active { 
+    color: var(--primary-thir-color)
+}
+.header-top-content-list-info { 
+    position: relative;
+}
+.header-top-content-list-info::after { 
+    content : "";
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:220px;
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: var(--primary-thir-color);
+}
+
+/* student header */
+.header-top-content-item-student { 
+    position: absolute;
+    top:47px;
+    left: -12px;
+    width: 270px;
+    background-color: var(--primary-first-color);
+    box-shadow: 0px 0px 1px #333;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    display: none;
+    z-index: 1;
+}
+.header-top-content-item:hover .header-top-content-item-student { 
+    display: block;
+}
+.header-top-content-item-student-list { 
+    list-style-type: none;
+}
+
+.header-top-content-item-student-item { 
+    height: 37px;
+}
+.header-top-content-item-student-link:hover  { 
+    background-color: var(--white-color);
+    color: var(--primary-first-color)
+}
+.header-top-content-item-student-link {
+    text-decoration: none;
+    display: block;
+    width: 101%;
+    height: 100%;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    padding-left: 12px;
+}
+/* end header top  */
+
+/* start-header-main */
+.header-main { 
+    height: 156px;
+    background-color: var(--white-color);
+    position: sticky;
+    top:0px;
+    z-index: 1;
+}
+
+.header-main-container-des-box-img { 
+    margin: auto;
+}
+.header-main-container-des-img { 
+    position: relative;
+    top:-12px
+}
+.header-main-container-des-about { 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header-main-container-des-text { 
+    font-size: 1.9rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color:var(--primary-first-color);
+    text-shadow: 0px 0px 2px var(--primary-first-color-color)
+}
+.header-main-container-info { 
+    height:156px;
+}
+.header-main-container-student { 
+    flex:10
+}
+.header-main-container-about-school { 
+    flex: 5;
+}
+.header-main-container-about-school-list { 
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    height: 100%;
+    position: relative; 
+    top:-4px;
+}
+.header-main-container-about-school-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.header-main-container-about-school-item::after { 
+    content: "";
+    display: block;
+    width: 100%;
+    height:10px;
+    position: absolute;
+    left: -10px;
+    padding-left: 10px;
+    top:50px;
+}
+.header-container-about-school-sepe {
+    display: none;
+    width: 42px;
+    height:2px;
+    position: absolute;
+    left: 0;
+    top:36px;
+    background-color:rgb(29,55,108); 
+    border-radius: 8px;
+    animation: FideIn linear 0.1s;
+    transform-origin: left;
+}
+.header-main-container-about-school-item:hover .header-container-about-school-sepe { 
+    display: block;
+}
+.header-main-container-about-school-link { 
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* list info school */
+
+.header-main-info-school-list { 
+    position:absolute;
+    top:56px;
+    left: -10px;
+    width: 250px;
+    list-style-type: none;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 0 1px #939393;
+    display: none;
+}
+.header-main-container-about-school-item:hover 
+.header-main-info-school-list { 
+    display: block;
+}
+.header-main-info-school-item { 
+    line-height: 38px;
+    background-image: linear-gradient(0deg, rgb(249, 249, 249) , #fff);
+    border-radius: 2px;
+}
+.header-main-info-school-link {
+    display: block; 
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:#696969;
+    padding-left: 10px;
+    font-weight: 100;
+}
+.header-main-info-school-link:hover { 
+    background-color: var(--primary-first-color) ;
+    color:var(--white-color)
+}
+
+
+/* slider start */
+
+.slider { 
+    background: url(/assets/Image/Slider/UMT1.jpeg) no-repeat;
+    height:100vh;
+    object-fit: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.slider-container-wrap { 
+    flex:8;
+}
+.slider-content { 
+    display: inline-block;
+    font-size: 4rem;
+    color:var(--white-color);
+    line-height: 1.4;
+}
+.slider-content-about {
+    font-size: 2rem; 
+    font-style: italic;
+
+}
+.slider-btn {
+    margin-top: 24px;
+}
+.slider-icon-wrap { 
+    flex:1;
+    text-align: center;
+}
+.slider-icon { 
+    font-size: 5rem;
+    color:var(--white-color);
+    opacity: 0.4;
+}
+
+
+
+.content { 
+    margin-top: 72px;
+}
+/* content-reason */
+.content-reason{ 
+    margin-top: 42px;
+}
+.content-reason-heading { 
+    font-size: 2.6rem;
+    color: var(--primary-first-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0px 0px 24px 0px;
+}
+.content-reason-about { 
+    font-size: 1.8rem;
+    line-height: 1.4;
+    word-spacing: 4px;
+    color: var(--text-color);
+    text-align: justify;
+    margin-right: 24px;
+
+}
+.content-reason-btn {
+    margin:36px 24px 0px 0px;
+}
+.content-reason-video-wrap { 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.content-reason-video { 
+    width: 100%;
+}
+
+/* content- train */
+.content-train { 
+    background-color: rgb(246,246,247) ;
+    height: 100vh;
+}
+.content-train-heading { 
+    font-size: 2.6rem;
+    color: var(--primary-first-color);
+    font-weight: 600;
+    line-height: auto;
+    padding: 68px 0 48px 0;
+}
+.content-train-sub-heading { 
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+.content-train-about { 
+    margin-top: 48px;
+}
+.content-train-about-list { 
+    list-style-type: none;
+    font-weight: 500;
+    margin: 0;
+}
+.content-train-about-item { 
+    height: 72px;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    background-color: var(--white-color);
+}
+
+/* ggg */
+.content-train-about-item.active-item:hover  { 
+    background-color: var(--primary-first-color);
+    color: var(--white-color);
+}
+.content-train-about-item.active-item:hover a { 
+    color: var(--white-color);
+}
+/* ggg */
+.content-train-about-link { 
+    font-size: 1.8rem;
+    text-decoration: none;
+    display: block;
+    color: var(--primary-first-color);
+}
+.content-train-about-icon { 
+    font-size: 2.5rem;
+}
+.content-train-about-img-box { 
+    width: 100%;
+    overflow: hidden;
+    height:468px;
+}
+.content-train-about-img { 
+    width: 100%;
+}
+
+
+
+.footer { 
+    height:200px;
+
+}

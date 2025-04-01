@@ -1,0 +1,106 @@
+:root  {
+    --white-color: white;
+    --text-color: #333;
+    --black-color: #000;
+    --primary-first-color: rgb(29,55,108);
+    --primary-thir-color: rgb(83,180,216);
+}
+* { 
+    box-sizing: inherit;
+    padding-left: 0;
+}
+html  {
+    font-size: 62.5%;   /* thuong la 16px */
+    line-height: 1.6rem;  /*chieu cao dong mac dinh */
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.grid { 
+    width: 1044px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__row { 
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap
+}
+.grid__col { 
+    display: flex; 
+    flex-direction: column;
+}
+.grid__column-2 { 
+    width: 16.666%;
+}
+.grid__colmn-8 { 
+    width: 83,333%;
+}
+.grid__column-10 { 
+    width: 83.3333%;
+}
+.grid__column-3 { 
+    width: 33.33%;
+}
+.grid__column-7 { 
+    width: calc(100% - 33.33%);
+}
+.grid__half { 
+    width: 50%;
+}
+.grid__column-6 { 
+    width: 60%;
+}
+.grid__column-4 { 
+    width: 40%;
+}
+.btn-m{ 
+    display: inline-block;
+    width: 180px;
+    height: 48px;
+    background-color: var(--white-color);
+    border: 2px solid var(--black-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-s { 
+    display: inline-block;
+    width: 240px;
+    height: 58px;
+    background-color: var(--white-color);
+    border:none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btn-container { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn-link { 
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+.btn-active:hover .btn-link { 
+    text-decoration:underline;
+    text-decoration-thickness: 1px;
+}
+@keyframes FideIn { 
+    from { 
+        transform: scaleX(0);
+    }
+    to { 
+        transform: scaleX(1);
+    }
+}
+
+    
